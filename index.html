@@ -240,19 +240,19 @@
         
         <div class="countdown">
             <div class="countdown-item">
-                <span class="countdown-value" id="days">99</span>
+                <span class="countdown-value" id="days">59</span>
                 <span class="countdown-label">Days</span>
             </div>
             <div class="countdown-item">
-                <span class="countdown-value" id="hours">23</span>
+                <span class="countdown-value" id="hours">00</span>
                 <span class="countdown-label">Hours</span>
             </div>
             <div class="countdown-item">
-                <span class="countdown-value" id="minutes">59</span>
+                <span class="countdown-value" id="minutes">00</span>
                 <span class="countdown-label">Minutes</span>
             </div>
             <div class="countdown-item">
-                <span class="countdown-value" id="seconds">59</span>
+                <span class="countdown-value" id="seconds">00</span>
                 <span class="countdown-label">Seconds</span>
             </div>
         </div>
@@ -279,9 +279,9 @@
     </div>
 
     <script>
-        // Set the date we're counting down to (99 days from now)
+        // Set the date we're counting down to (2 months from now)
         const countDownDate = new Date();
-        countDownDate.setDate(countDownDate.getDate() + 99);
+        countDownDate.setMonth(countDownDate.getMonth() + 2);
         
         // Update the countdown every 1 second
         const countdownFunction = setInterval(function() {
