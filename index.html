@@ -3,325 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TestDL - Coming Soon</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Placeholder</title>
     <style>
-        * {
+        /* Basic reset to ensure the container fills the screen */
+        body, html {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-            color: #fff;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 900px;
+            height: 100%;
             width: 100%;
-            text-align: center;
-            padding: 40px 30px;
-            background-color: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background-color: #f0f0f0; /* Light grey background */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
-        
-        .logo {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 10px;
-            letter-spacing: 2px;
-            color: #fff;
-            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-        
-        .logo span {
-            color: #ffd166;
-        }
-        
-        .domain-name {
-            font-size: 2.8rem;
-            font-weight: 700;
-            margin-bottom: 30px;
-            color: #fff;
-            letter-spacing: 1px;
-        }
-        
-        .tagline {
-            font-size: 1.5rem;
-            margin-bottom: 40px;
-            opacity: 0.9;
-            line-height: 1.5;
-        }
-        
-        .coming-soon {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 40px;
-            color: #ffd166;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-        }
-        
-        .countdown {
+
+        /* The centering magic */
+        .container {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            margin-bottom: 50px;
-            flex-wrap: wrap;
-        }
-        
-        .countdown-item {
-            background: rgba(255, 255, 255, 0.15);
-            border-radius: 10px;
-            padding: 20px 15px;
-            min-width: 100px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-        }
-        
-        .countdown-value {
-            font-size: 2.5rem;
-            font-weight: 700;
-            display: block;
-        }
-        
-        .countdown-label {
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            opacity: 0.8;
-        }
-        
-        .description {
-            font-size: 1.2rem;
-            line-height: 1.6;
-            margin-bottom: 40px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            opacity: 0.9;
-        }
-        
-        .contact {
-            margin-bottom: 40px;
-        }
-        
-        .contact p {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-        
-        .contact a {
-            color: #ffd166;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-        
-        .contact a:hover {
-            text-decoration: underline;
-        }
-        
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 30px;
-        }
-        
-        .social-icons a {
-            display: inline-flex;
             align-items: center;
-            justify-content: center;
-            width: 50px;
-            height: 50px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            color: white;
-            font-size: 1.5rem;
-            transition: all 0.3s;
+            height: 100vh;
+            width: 100vw;
+            text-align: center;
         }
-        
-        .social-icons a:hover {
-            background: rgba(255, 209, 102, 0.8);
-            transform: translateY(-5px);
-        }
-        
-        .footer {
-            margin-top: 40px;
-            font-size: 0.9rem;
-            opacity: 0.7;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            padding-top: 20px;
-        }
-        
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            .logo {
-                font-size: 2.5rem;
-            }
-            
-            .domain-name {
-                font-size: 2rem;
-            }
-            
-            .coming-soon {
-                font-size: 2.2rem;
-                letter-spacing: 2px;
-            }
-            
-            .tagline {
-                font-size: 1.3rem;
-            }
-            
-            .countdown-item {
-                min-width: 80px;
-                padding: 15px 10px;
-            }
-            
-            .countdown-value {
-                font-size: 2rem;
-            }
-            
-            .description {
-                font-size: 1.1rem;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .container {
-                padding: 30px 20px;
-            }
-            
-            .logo {
-                font-size: 2rem;
-            }
-            
-            .domain-name {
-                font-size: 1.7rem;
-            }
-            
-            .coming-soon {
-                font-size: 1.8rem;
-                letter-spacing: 1px;
-            }
-            
-            .countdown {
-                gap: 10px;
-            }
-            
-            .countdown-item {
-                min-width: 70px;
-                padding: 10px 5px;
-            }
-            
-            .countdown-value {
-                font-size: 1.7rem;
-            }
+
+        /* Responsive typography */
+        .domain-name {
+            font-weight: 800;
+            color: #333;
+            text-transform: lowercase;
+            /* 10vw means the text size is 10% of the window width */
+            font-size: 10vw; 
+            letter-spacing: -2px;
         }
     </style>
 </head>
 <body>
+
     <div class="container">
-        <div class="logo">TestDL</div>
-        <h1 class="domain-name">testdl.it</h1>
-        <p class="tagline">Something amazing is on the way!</p>
-        
-        <div class="coming-soon">Coming Soon</div>
-        
-        <div class="countdown">
-            <div class="countdown-item">
-                <span class="countdown-value" id="days">59</span>
-                <span class="countdown-label">Days</span>
-            </div>
-            <div class="countdown-item">
-                <span class="countdown-value" id="hours">00</span>
-                <span class="countdown-label">Hours</span>
-            </div>
-            <div class="countdown-item">
-                <span class="countdown-value" id="minutes">00</span>
-                <span class="countdown-label">Minutes</span>
-            </div>
-            <div class="countdown-item">
-                <span class="countdown-value" id="seconds">00</span>
-                <span class="countdown-label">Seconds</span>
-            </div>
-        </div>
-        
-        <p class="description">
-            We're working hard to bring you an incredible online experience. Our website is currently under construction and will be launching soon. Stay tuned for updates!
-        </p>
-        
-        <div class="contact">
-            <p>For inquiries, please contact us at:</p>
-            <p><a href="mailto:hello@testdl.it">hello@testdl.it</a></p>
-        </div>
-        
-        <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-        
-        <div class="footer">
-            <p>&copy; 2026 TestDL. All Rights Reserved.</p>
-        </div>
+        <h1 class="domain-name">www.testdl.it</h1>
     </div>
 
-    <script>
-        // Set the date we're counting down to (2 months from now)
-        const countDownDate = new Date();
-        countDownDate.setMonth(countDownDate.getMonth() + 2);
-        
-        // Update the countdown every 1 second
-        const countdownFunction = setInterval(function() {
-            // Get today's date and time
-            const now = new Date().getTime();
-            
-            // Find the distance between now and the countdown date
-            const distance = countDownDate - now;
-            
-            // Time calculations for days, hours, minutes and seconds
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            
-            // Display the result
-            document.getElementById("days").innerHTML = days < 10 ? "0" + days : days;
-            document.getElementById("hours").innerHTML = hours < 10 ? "0" + hours : hours;
-            document.getElementById("minutes").innerHTML = minutes < 10 ? "0" + minutes : minutes;
-            document.getElementById("seconds").innerHTML = seconds < 10 ? "0" + seconds : seconds;
-            
-            // If the countdown is over, write some text
-            if (distance < 0) {
-                clearInterval(countdownFunction);
-                document.querySelector(".countdown").innerHTML = "<h2>WE'RE LIVE!</h2>";
-            }
-        }, 1000);
-        
-        // Dynamic domain name update based on URL (optional feature)
-        document.addEventListener("DOMContentLoaded", function() {
-            // Extract domain from URL if viewing from actual domain
-            const currentHostname = window.location.hostname;
-            if (currentHostname !== "localhost" && currentHostname !== "127.0.0.1" && !currentHostname.includes("github.io")) {
-                document.querySelector('.domain-name').textContent = currentHostname;
-                document.querySelector('.logo span').textContent = currentHostname.replace('.com', '').replace('www.', '');
-                document.querySelector('.contact a').textContent = `hello@${currentHostname}`;
-                document.querySelector('.contact a').href = `mailto:hello@${currentHostname}`;
-                document.querySelector('.footer p').innerHTML = `&copy; ${new Date().getFullYear()} ${currentHostname}. All Rights Reserved.`;
-            }
-        });
-    </script>
 </body>
 </html>
